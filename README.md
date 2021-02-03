@@ -1,9 +1,11 @@
 # fed-e-task-04-05-master
 1.通过该项目，请简要说明 typescript 比 javascript 的优势在哪？
 
-    a. ts 为 js 增加了一个类型系统, 静态检测代码类型, 开发者可以在运行之前就被提示错误信息, 对于有类型限制的数据, 在可读性上面也有很大的优势.
+    a. ts 为 js 增加了一个类型系统, 静态检测代码类型, 开发者可以在运行之前就被提示错误信息, 对于有类型限制的数据,
+       在可读性上面也有很大的优势.
     
-    b. js本身为弱类型语言, 也有着隐式转换、运行时确认类型的特点, 但也是这些原因, 在项目体量越来越大的时候, 其劣势也就越来越明显, 使用ts, 可以使得代码在 可读性、延展性、减少出错 上面有很大的优势.
+    b. js本身为弱类型语言, 也有着隐式转换、运行时确认类型的特点, 但也是这些原因, 在项目体量越来越大的时候, 其劣势
+       也就越来越明显, 使用ts, 可以使得代码在 可读性、延展性、减少出错 上面有很大的优势.
     
     c. ts 是 js 的超集, 这意味着在 ts 中写 js 也是兼容的
     
@@ -33,13 +35,15 @@
 
       b. connect：它为连接的组件提供了存储中所需的数据片段，以及可用于向存储调度操作的功能
 
-      c. hooks: 提供一组钩子api, 用于取代现有的 connect 高阶组件, 这些API允许您订阅Redux存储和调度操作，而不必将组件包装在connect()中
+      c. hooks: 提供一组钩子api, 用于取代现有的 connect 高阶组件, 这些API允许您订阅Redux存储和调度操作，而不必将
+         组件包装在connect()中
             useSelector: 从 Redux store state 中提取数据
             useDispatch: 从 Redux store 中返回对 dispatch 的引用, 在需要的时候执行 dispatch actions
             useStore: 返回对 Provider 入参 store 的对象的引用
 
 4.redux 中的异步如何处理？
 
-    a. redux-thunk: 在中间件函数内部 action 增加了 function 类型的判断, action是函数的话, 返回函数的执行结果. 如此, 异步就可以写在函数内部
+    a. redux-thunk: 在中间件函数内部 action 增加了 function 类型的判断, action是函数的话, 返回函数的执行结果.
+       如此, 异步就可以写在函数内部
 
     b. redux-saga: 暴露 put、takeEvery, 配合generator函数, 实现异步, 其将api与store解耦, 是比redux-thunk更好的解决方式
